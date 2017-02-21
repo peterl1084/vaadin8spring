@@ -22,6 +22,7 @@
 	<modules>
 		<module>dashboard-ui</module>
 		<module>dashboard-widgetset</module>
+		<module>dashboard-deploy</module>
 	</modules>
 
 	<properties>
