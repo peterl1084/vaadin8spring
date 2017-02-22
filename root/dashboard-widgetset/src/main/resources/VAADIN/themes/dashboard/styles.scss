@@ -6,4 +6,6 @@
 
 .dashboard {
   @include valo;
+
+  @include dashboard-view-display;
 }

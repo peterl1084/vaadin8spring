@@ -1,0 +1,26 @@
+@mixin dashboard-view-display {
+
+  .dashboard-view-display {
+    .dashboard-main-menu {
+      float: left;
+    }
+
+    .dashboard-content-area {
+        display: block;
+        overflow: hidden;
+
+        height: 100%;
+    }
+
+    .dashboard-view-panel {
+      overflow-x: hidden !important;
+      display: block;
+
+
+
+      padding: 10px !important;
+
+      height: calc(100% - 50px) !important;
+    }
+  }
+}
