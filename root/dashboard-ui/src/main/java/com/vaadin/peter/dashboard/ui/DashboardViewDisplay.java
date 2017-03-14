@@ -1,5 +1,6 @@
 package com.vaadin.peter.dashboard.ui;
 
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.navigator.View;
@@ -18,9 +19,10 @@ public class DashboardViewDisplay extends CssLayout implements ViewDisplay, IsCo
 
 	private Panel viewArea;
 
-	public DashboardViewDisplay() {
+	public DashboardViewDisplay(ObjectProvider<DashboardMainMenu> mainMenuProvider) {
 		setSizeFull();
 
+		DashboardMainMenu mm = mainMenuProvider.getObject();
 		setPrimaryStyleName(DashboardTheme.ViewDisplayStyles.VIEW_DISPLAY);
 
 		contentArea = new CssLayout();
@@ -29,7 +31,6 @@ public class DashboardViewDisplay extends CssLayout implements ViewDisplay, IsCo
 		viewArea = new Panel();
 		viewArea.setPrimaryStyleName(DashboardTheme.ViewDisplayStyles.VIEW_PANEL);
 		viewArea.setStyleName(ValoTheme.PANEL_BORDERLESS);
-		viewArea.setSizeUndefined();
 		viewArea.setHeight(100, Unit.PERCENTAGE);
 
 		contentArea.addComponent(viewArea);
