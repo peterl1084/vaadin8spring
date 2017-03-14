@@ -1,0 +1,3 @@
+[submodule "bean-grid"]
+	path = bean-grid
+	url = https://github.com/peterl1084/bean-grid/
